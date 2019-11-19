@@ -1,10 +1,12 @@
 package com.codeclan.example.userfilesmanagement.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 @Entity
-@Table(name="Users")
+@Table(name="users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,12 +15,16 @@ public class User {
     @Column(name="name")
     private String name ;
 
-    @OneToMany(mappedBy = "folder")
+    @JsonIgnoreProperties("users")
+    @OneToMany(mappedBy = "user")
     List<Folder> folders;
 
     public User(String name) {
         this.name = name;
         this.folders=new ArrayList<>();
+    }
+
+    public User() {
     }
 
     public String getName() {

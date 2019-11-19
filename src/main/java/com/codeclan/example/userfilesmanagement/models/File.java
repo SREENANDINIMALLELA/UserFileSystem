@@ -1,5 +1,7 @@
 package com.codeclan.example.userfilesmanagement.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
@@ -12,9 +14,11 @@ public class File {
 
     @Column(name="name")
     private String name ;
+
     @Column(name="size")
     private int size;
 
+    @JsonIgnoreProperties("files")
     @ManyToOne
     @JoinColumn(name = "folder_id", nullable = false)
     private Folder folder;
@@ -23,6 +27,9 @@ public class File {
         this.name = name;
         this.size = size;
         this.folder = folder;
+    }
+
+    public File() {
     }
 
     public Long getId() {
