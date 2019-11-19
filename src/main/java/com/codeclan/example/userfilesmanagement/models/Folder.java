@@ -4,6 +4,8 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name="folders")
 public class Folder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,7 +14,9 @@ public class Folder {
 
     @Column(name="title")
     private String title;
-    @Column(name="user")
+
+     @ManyToOne
+    @JoinColumn(name = "user_id",nullable=false)
     private User user;
 
     @OneToMany(mappedBy = "file")

@@ -1,15 +1,19 @@
 package com.codeclan.example.userfilesmanagement.models;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@Entity
+@Table(name="Users")
 public class User {
     @Id
-    @GeneratedValue()
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Long id;
+    @Column(name="name")
     private String name ;
+
+    @OneToMany(mappedBy = "folder")
     List<Folder> folders;
 
     public User(String name) {
