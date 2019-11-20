@@ -39,7 +39,7 @@ class UserfilesmanagementApplicationTests {
 	   File file1 = new File("Java",10,folder1);
 	   fileRepository.save(file1);
 
-		File file2 = new File("Python",10,folder1);
+		File file2 = new File("Python",20,folder1);
 		fileRepository.save(file2);
 
 	   folder1.addFile(file1);

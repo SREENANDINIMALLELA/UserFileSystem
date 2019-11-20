@@ -17,14 +17,14 @@ import java.util.Optional;
 public class UserController {
    @Autowired
     UserRepository userRepository;
-    @GetMapping
-    public List<User> getAllPirates(){
-        return   userRepository.findAll();
-    }
-    @GetMapping("{id}")
-    // returns if id is present and nul if id not present in the table
-    public Optional<User> getPirate(@PathVariable Long id){
-        return   userRepository.findById(id);
-    }
+//    @GetMapping
+//    public List<User> getAllPirates(){
+//        return   userRepository.findAll();
+//    }
+//    @GetMapping("{id}")
+//    // returns if id is present and nul if id not present in the table
+//    public Optional<User> getPirate(@PathVariable Long id){
+//        return   userRepository.findById(id);
+//    }
 
 }

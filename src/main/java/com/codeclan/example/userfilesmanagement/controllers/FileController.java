@@ -20,12 +20,12 @@ public class FileController {
         //get all pirates
         @GetMapping
         public List<File> getAllPirates(){
-            return  fileRepository.findAll();
+                return  fileRepository.findAll();
         }
         @GetMapping("{id}")
         // returns if id is present and nul if id not present in the table
         public Optional<File> getPirate(@PathVariable Long id){
-            return  fileRepository.findById(id);
+                return  fileRepository.findById(id);
         }
 
 
