@@ -6,5 +6,8 @@ import org.springframework.data.rest.core.config.Projection;
 
 @Projection(name = "embedFile",types= File.class)
 public interface EmbedFile {
+    String getName();
+    int gerSize();
+    Folder getFolder();
 
 }

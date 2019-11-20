@@ -17,15 +17,15 @@ import java.util.Optional;
 public class FolderController {
     @Autowired
     FolderRepository folderRepository;
-    @GetMapping
-    public List<Folder> getAllPirates(){
-        return  folderRepository.findAll();
-    }
-    @GetMapping("{id}")
-    // returns if id is present and nul if id not present in the table
-    public Optional<Folder> getPirate(@PathVariable Long id){
-        return  folderRepository.findById(id);
-    }
+//    @GetMapping
+//    public List<Folder> getAllFolders(){
+//        return  folderRepository.findAll();
+//    }
+//    @GetMapping("{id}")
+//    // returns if id is present and nul if id not present in the table
+//    public Optional<Folder> getFolder(@PathVariable Long id){
+//        return  folderRepository.findById(id);
+//    }
 
 
 }

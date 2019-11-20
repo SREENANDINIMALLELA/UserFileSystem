@@ -23,7 +23,7 @@ public class File {
     @JoinColumn(name = "folder_id", nullable = false)
     private Folder folder;
 
-    public File(String name, int size, Folder folder) {
+    public File(String name, int size,Folder folder) {
         this.name = name;
         this.size = size;
         this.folder = folder;

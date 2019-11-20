@@ -18,16 +18,16 @@ public class FileController {
         @Autowired
         FileRepository fileRepository;
         //get all pirates
-        @GetMapping
-        public List<File> getAllPirates(){
-                return  fileRepository.findAll();
-        }
-        @GetMapping("{id}")
-        // returns if id is present and nul if id not present in the table
-        public Optional<File> getPirate(@PathVariable Long id){
-                return  fileRepository.findById(id);
-        }
-
+//        @GetMapping
+//        public List<File> getAllFiles(){
+//                return  fileRepository.findAll();
+//        }
+//        @GetMapping("{id}")
+//        // returns if id is present and nul if id not present in the table
+//        public Optional<File> getFile(@PathVariable Long id){
+//                return  fileRepository.findById(id);
+//        }
+//
 
 
 }
